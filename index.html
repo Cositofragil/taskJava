@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/fav.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-ligth">
+        <div class="container-fluid">
+            <img class="img px-2" id="logo" src="./assets/img/logo.png" alt="logo">
+            <button class="navbar-toggler bg-ligth p-1 border-0 rounded" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-dark border-0 rounded"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mb-2 text-center p-3">
+                    <li class="nav-item p-2">
+                        <a href="#" class="btn btn-dark">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="./events.html" class="btn btn-dark">Upcoming Events</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="pastevents.html" class="btn btn-dark">Past Events</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="contact.html" class="btn btn-dark">Contact</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="stats.html" class="btn btn-dark">Stats</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container-fluid bg-success-subtle pt-2 pb-2">
+            <div class="row align-items-center">
+                <div class="col">
+                    <a href="./stats.html" class="btn btn-outline-success" data-bs-toggle="tooltip"
+                        data-bs-placement="left" title="Index">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#67e27b"
+                            class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                        </svg></a>
+                </div>
+                <div class="col text-center">
+                    <h1>Home</h1>
+                </div>
+                <div class="col text-end">
+                    <a href="./events.html" class="btn btn-outline-success" data-bs-toggle="tooltip"
+                        data-bs-placement="right" title="Past Events"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="#67e27b" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid">
+        <form>
+            <div class="row align-items-center mt-3 mb-3">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7 ">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                            name="checkbox">
+                        <label class="form-check-label" for="inlineCheckbox1">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"
+                            name="checkbox">
+                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"
+                            name="checkbox">
+                        <label class="form-check-label" for="inlineCheckbox3">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"
+                            name="checkbox">
+                        <label class="form-check-label" for="inlineCheckbox4">Category</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"
+                            name="checkbox">
+                        <label class="form-check-label" for="inlineCheckbox5">Category</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="search"
+                            aria-describedby="button_search">
+                        <button type="submit" class="btn btn-outline" id="button_search"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="tarjeta col-xs-12 col-sm-6 col-md-3 col-lg-3 m-10">
+                <img src="./assets/img/Cinema.jpg" class="card-img rounded-top " alt="...">
+                <div class="card-body bg-success-subtle border-1 p-3 text-dark rounded-bottom mb-4">
+                    <h5 class="card-title">Título</h5>
+                    <p class="card-text">Descripción</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="card-price"><i class="fa fa-usd" aria-hidden="true"></i>10000</span>
+                        </div>
+                        <div class="col-6">
+                            <a href="./details.html" class="btn btn-success d-block">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta col-xs-12 col-sm-6 col-md-3 col-lg-3 m-10">
+                <img src="./assets/img/Costume_Party.jpg" class="card-img rounded-top " alt="...">
+                <div class="card-body bg-success-subtle border-1 p-3 text-dark rounded-bottom mb-4">
+                    <h5 class="card-title">Título</h5>
+                    <p class="card-text">Descripción</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="card-price"><i class="fa fa-usd" aria-hidden="true"></i>10000</span>
+                        </div>
+                        <div class="col-6">
+                            <a href="./details.html" class="btn btn-success d-block">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta col-xs-12 col-sm-6 col-md-3 col-lg-3 m-10">
+                <img src="./assets/img/Food_Fair.jpg" class="card-img rounded-top " alt="...">
+                <div class="card-body bg-success-subtle border-1 p-3 text-dark rounded-bottom mb-4">
+                    <h5 class="card-title">Título</h5>
+                    <p class="card-text">Descripción</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="card-price"><i class="fa fa-usd" aria-hidden="true"></i> 10000</span>
+                        </div>
+                        <div class="col-6">
+                            <a href="./details.html" class="btn btn-success d-block">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta col-xs-12 col-sm-6 col-md-3 col-lg-3 m-10">
+                <img src="./assets/img/Marathon.jpg" class="card-img rounded-top " alt="...">
+                <div class="card-body bg-success-subtle border-1 p-3 text-dark rounded-bottom mb-4">
+                    <h5 class="card-title">Título</h5>
+                    <p class="card-text">Descripción</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="card-price"><i class="fa fa-usd" aria-hidden="true"></i> 10000</span>
+                        </div>
+                        <div class="col-6">
+                            <a href="./details.html" class="btn btn-success d-block">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-2 bg-success-subtle">
+        <section class="d-flex p-2 border-bottom justify-content-between">
+            <img class="me-3" src="./assets/img/Logo Amazing Events.png" width="100" height="30">
+            <div>
+                <button class="footer-icon btn btn-outline-success rounded-circle m-1" type="button">
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <button class="footer-icon btn btn-outline-success rounded-circle m-1" type="button">
+                    <i class="fa-brands fa-facebook"></i>
+                </button>
+                <button class="footer-icon btn btn-outline-success rounded-circle m-1" type="button">
+                    <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="align-items-center d-flex">
+                <span class="footer-span"> FE13-TN</span>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
