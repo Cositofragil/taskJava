@@ -10,9 +10,7 @@ h1 {
 }
 
 .navbar {
-    height: 5vh;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+min-height: 5vh;
 }
 
 .navbar-collapse {
