@@ -4,9 +4,25 @@ let input = document.querySelector('input')
 
 let divcategorias = document.getElementById("tarjetaCheckbox")
 
+let eventsObjeto;
+let eventsArray;
+const obternerEvento = async()=>{
+    try {
+        const respuesta =await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+        eventsObjeto = await respuesta.json()
+        console.log(eventsObjeto);
+        eventsArray = eventsObjeto.events
+        console.log(eventsArray);
+        crearCards(eventsObjeto.events)
+        crearCheckboxes(eventsObjeto.events)
+    } catch (error) {
+        console.log(error);
+        alert('error')
+    }
+}
+obternerEvento();
 
-crearCards(data.events)
-crearCheckboxes(data.events)
+
 
 
 input.addEventListener('input', filtro)
@@ -33,7 +49,7 @@ function crearCards(array){
                             <span class="card-price"><i class="fa fa-usd" aria-hidden="true"></i>${event.price}</span>
                         </div>
                         <div class="col-6">
-                            <a href="${event.price}" class="btn btn-success d-block">Ver más...</a>
+                            <a href="./details.html?_id=${event._id}" class="btn btn-success d-block">Ver más...</a>
                         </div>
                     </div>
                 </div>
@@ -77,11 +93,9 @@ function crearCheckboxes(array){
     categoriasF.forEach(event => {
         //console.log(event)
         template2 += `
-        <div id="tarjetaCheckbox" class="col-xs-12 col-sm-12 col-md-6 col-lg-7 ">
-            <div class="form-check form-check-inline">
+        <div id="tarjetaCheckbox" class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="${event}" value="${event}" name="checkbox">
                 <label class="form-check-label" for="${event}">${event}</label>
-            </div>
         </div>`
     })
     divcategorias.innerHTML = template2;
@@ -105,7 +119,7 @@ function fPorCategory(array){
 }
 
 function filtro(){
-    let arrayF1 = fPorText(data.events, input.value)
+    let arrayF1 = fPorText(eventsObjeto.events, input.value)
     let arrayF2 = fPorCategory(arrayF1)
     crearCards(arrayF2)
 }

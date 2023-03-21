@@ -67,14 +67,14 @@
             </div>
         </div>
     </section>
-    <div class="container-fluid p-4">
+    <div id="containerstats"class="container-fluid p-4">
         <table class="table table-striped table-hover table-bordered border-success">
             <tbody>
                 <tr class="table-success fs-5">
                     <td colspan="3">Event Statistics</td>
                 </tr>
             </tbody>
-            <tbody>
+            <tbody id="tbodyEvents">
                 <tr>
                     <th scope="col">Events with the higthest percentage of attendance</th>
                     <th scope="col">Events with the lowest percentage of attendance</th>
@@ -91,7 +91,7 @@
                     <td colspan="3">Upcoming events statistics by category</td>
                 </tr>
             </tbody>
-            <tbody>
+            <tbody id="tbodyUp">
                 <tr class="text-center">
                     <th scope="col">Categories</th>
                     <th scope="col">Revenues</th>
@@ -118,7 +118,7 @@
                     <td colspan="3">Past events satadistics by category</td>
                 </tr>
             </tbody>
-            <tbody>
+            <tbody id="tbodyPast">
                 <tr class="tr text-center">
                     <th scope="col">Categories</th>
                     <th scope="col">Revenues</th>
@@ -174,5 +174,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="./assets/javascript/stats.js"></script>
 </body>
 </html>

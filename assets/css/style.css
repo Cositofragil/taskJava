@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+body, #idTarjetaPadre, .container, #containerstats{
+    min-height: 100vh;
+}
+
 h1 {
     font-weight: 700;
     font-size: 12em;
@@ -18,8 +22,9 @@ min-height: 5vh;
 }
 
 p{
-    height: 4rem;
+    height: 6rem;
 }
+
 
 .card-date,
 .card-category,
