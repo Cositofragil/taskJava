@@ -5,11 +5,13 @@ let input = document.querySelector('input')
 
 let divcategorias = document.getElementById("tarjetaCheckbox")
 
-
+let eventsArray;
+let eventsObjeto;
 const obtenerEvento = async () => {
     try {
         const respuesta = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
-        let  eventsObjeto = await respuesta.json()
+        eventsObjeto = await respuesta.json()
+        eventsArray = eventsObjeto.events
         input.addEventListener('input', ()=>crearCards(fPorText(filtrado(eventsObjeto),input.value)))
         // console.log(eventsObjeto);
         crearCheckboxes(filtrado(eventsObjeto))
@@ -106,8 +108,8 @@ function fPorCategory(array) {
     return arrayFiltrado
 }
 
-function filtro(eventsF) {
-    let arrayF1 = fPorText(eventsF, input.value)
+function filtro(array) {
+    let arrayF1 = fPorText(array, input.value)
     let arrayF2 = fPorCategory(arrayF1)
     crearCards(arrayF2)
 }

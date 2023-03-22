@@ -102,7 +102,7 @@ function crearCheckboxes(array){
 }
 
 function fPorText(array, texto){
-    let arrayF = array.filter(event => event.category.toLowerCase().includes(texto.toLowerCase()))
+    let arrayF = array.filter(event => event.name.toLowerCase().includes(texto.toLowerCase()))
     return arrayF
 }
 
