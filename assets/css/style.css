@@ -148,6 +148,15 @@ p{
     }
 }
 
+@media (min-width: 100px) and (max-width: 566px) {
+    .pie{
+        flex-direction: column;
+    }
+    .divRedes{
+        padding-bottom: 1rem;
+    }
+}
+
 @media (max-width: 767.98px) {
     #logo {
         width: 120px;
@@ -175,3 +184,4 @@ p{
         width: 200px;
     }
 }
+

@@ -10,7 +10,7 @@ let eventsArray
 const obtenerEvento = async () => {
     try {
         const respuesta = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
-        let  eventsObjeto = await respuesta.json()
+        eventsObjeto = await respuesta.json()
         eventsArray = eventsObjeto.events
         input.addEventListener('input', ()=>crearCards(fPorText(filtrado(eventsObjeto),input.value)))
         // console.log(eventsObjeto);
@@ -29,10 +29,11 @@ function filtrado(objeto){
     let eventsP = []
 for (let event of objeto.events) {
     if (objeto.currentDate > event.date) {
-        //console.log(event)
+        // console.log(event)
         eventsP.push(event)
     }
 }
+// console.log(eventsP);
 return eventsP
 }
 
@@ -90,8 +91,8 @@ function fPorText(array, texto) {
     if (texto == ""){
         return array
     }
-    let arrayF = array.filter(event => event.name.toLowerCase().includes(texto.toLowerCase()))
-    return arrayF
+    let arrayP = array.filter(event => event.name.toLowerCase().includes(texto.toLowerCase()))
+    return arrayP
 }
 
 function fPorCategory(array) {
