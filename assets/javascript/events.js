@@ -19,7 +19,6 @@ const obtenerEvento = async () => {
         filtro(filtrado(eventsObjeto))
     } catch (error) {
         console.log(error);
-        alert('error')
     }
 }
 obtenerEvento();
@@ -29,11 +28,10 @@ function filtrado(objeto){
     let eventsF = []
 for (let event of objeto.events) {
     if (objeto.currentDate < event.date) {
-        // console.log(event)
+        //console.log(event)
         eventsF.push(event)
     }
 }
-// console.log(eventsF);
 return eventsF
 }
 

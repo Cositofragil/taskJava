@@ -12,14 +12,13 @@ const obtenerEvento = async () => {
         const respuesta = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
         eventsObjeto = await respuesta.json()
         eventsArray = eventsObjeto.events
-        input.addEventListener('input', ()=>crearCards(fPorText(filtrado(eventsObjeto),input.value)))
+        input.addEventListener('input', ()=>crearCards(fPorText(filtro(filtrado(eventsObjeto),input.value))))
         // console.log(eventsObjeto);
         crearCheckboxes(filtrado(eventsObjeto))
-        divcategorias.addEventListener('change', ()=> crearCards(fPorCategory(filtrado(eventsObjeto))))
+        divcategorias.addEventListener('change', ()=> crearCards(fPorCategory(filtro(filtrado(eventsObjeto)))))
         filtro(filtrado(eventsObjeto))
     } catch (error) {
         console.log(error);
-        alert('error')
     }
 }
 obtenerEvento();
@@ -107,8 +106,8 @@ function fPorCategory(array) {
     return arrayFiltrado
 }
 
-function filtro(eventsP) {
-    let arrayF1 = fPorText(eventsP, input.value)
+function filtro(array) {
+    let arrayF1 = fPorText(array, input.value)
     let arrayF2 = fPorCategory(arrayF1)
     crearCards(arrayF2)
 }
